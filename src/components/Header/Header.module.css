@@ -1,0 +1,25 @@
+.text {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+  margin-bottom: 16vh;
+  letter-spacing: 6px;
+}
+.text__secondary {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .text {
+    margin-top: 10vh;
+  }
+}
+@media (min-width: 768px) {
+  .text {
+    margin-top: 10vh;
+  }
+}

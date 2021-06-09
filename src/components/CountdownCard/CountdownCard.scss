@@ -1,0 +1,53 @@
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20vh;
+  margin: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.text {
+  text-align: center;
+  width: 80%;
+  margin-top: 12px;
+  color: lighten($color: gray, $amount: 15%);
+  font-size: small;
+}
+.twocolordiv {
+  grid-row: 1;
+  position: relative;
+  z-index: 9;
+  background: hsl(236, 21%, 26%);
+  height: 96px;
+  width: 96px;
+  border-radius: 10px;
+  box-shadow: 0 10px 2px -2px hsl(234, 17%, 12%);
+  color: hsl(345, 95%, 68%);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.twocolordiv:before {
+  content: '';
+  box-shadow: 0 2.5px 2px -2px black;
+  position: absolute;
+  opacity: 1;
+  z-index: -1;
+  top: 0;
+
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  border-bottom: black 3px;
+  border-radius: 10px;
+  background: darken($color: hsl(236, 21%, 26%), $amount: 5%);
+}
+@media (max-width: 376px) {
+  .twocolordiv {
+    height: 72px;
+    width: 72px;
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,44 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  margin-top: 40vh;
+  z-index: 1000;
+  position: relative;
+}
+.social__icon {
+  margin-left: -20px;
+}
+.social__icons {
+  display: inline-flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+@media (max-width: 376px) {
+  .social {
+    margin-top: 50vh;
+  }
+}
+
+@media (max-height: 376px) and (min-height: 559px) {
+  .social {
+    margin-top: 20vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .social {
+    margin-top: 100vh;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .social {
+    margin-top: 65vh;
+  }
+}
