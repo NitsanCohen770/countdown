@@ -15,7 +15,7 @@
   color: lighten($color: gray, $amount: 15%);
   font-size: small;
 }
-.twocolordiv {
+.card {
   grid-row: 1;
   position: relative;
   z-index: 9;
@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.twocolordiv:before {
+.card:before {
   content: '';
   box-shadow: 0 2.5px 2px -2px black;
   position: absolute;
@@ -45,7 +45,7 @@
   background: darken($color: hsl(236, 21%, 26%), $amount: 5%);
 }
 @media (max-width: 376px) {
-  .twocolordiv {
+  .card {
     height: 72px;
     width: 72px;
     font-size: 3rem;
