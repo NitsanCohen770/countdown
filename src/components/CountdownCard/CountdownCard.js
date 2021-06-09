@@ -15,17 +15,17 @@ const CountdownCard = () => {
   const [seconds, setSeconds] = useState(Math.trunc(secondsLeft));
 
   setInterval(() => {
-    const counterEndDatea = new Date(2021, 7, 1, 10, 33, 30, 0);
-    const timeDifferencesa =
-      (counterEndDatea.getTime() - new Date().getTime()) / (1000 * 3600 * 24);
-    const hoursLefta = (timeDifferencesa % 1) * 24;
-    const minutesLefta = (hoursLefta % 1) * 60;
-    const secondsLefta = (minutesLefta % 1) * 60;
-    console.log(secondsLefta);
-    setDays(Math.trunc(timeDifferencesa));
-    setHours(Math.trunc(hoursLefta));
-    setMinutes(Math.trunc(minutesLefta));
-    setSeconds(Math.trunc(secondsLefta));
+    const counterEndDateCurrent = new Date(2021, 7, 1, 10, 33, 30, 0);
+    const timeDifferencesCurrent =
+      (counterEndDateCurrent.getTime() - new Date().getTime()) /
+      (1000 * 3600 * 24);
+    const hoursLeftCurrent = (timeDifferencesCurrent % 1) * 24;
+    const minutesLeftCurrent = (hoursLeftCurrent % 1) * 60;
+    const secondsLeftCurrent = (minutesLeftCurrent % 1) * 60;
+    setDays(Math.trunc(timeDifferencesCurrent));
+    setHours(Math.trunc(hoursLeftCurrent));
+    setMinutes(Math.trunc(minutesLeftCurrent));
+    setSeconds(Math.trunc(secondsLeftCurrent));
   }, 1000);
 
   return (
