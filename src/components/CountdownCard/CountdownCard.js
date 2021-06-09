@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import './CountdownCard.scss';
+
 const CountdownCard = () => {
-  const counterEndDate = new Date(2021, 7, 1, 10, 33, 30, 0);
+  const counterEndDate = new Date(2021, 8, -20, -1, -63, 1, 0);
   const timeDifferences =
     (counterEndDate.getTime() - new Date().getTime()) / (1000 * 3600 * 24);
   const hoursLeft = (timeDifferences % 1) * 24;
@@ -14,8 +15,8 @@ const CountdownCard = () => {
   const [minutes, setMinutes] = useState(Math.trunc(minutesLeft));
   const [seconds, setSeconds] = useState(Math.trunc(secondsLeft));
 
-  setInterval(() => {
-    const counterEndDateCurrent = new Date(2021, 7, 1, 10, 33, 30, 0);
+  const countdownInterval = setInterval(() => {
+    const counterEndDateCurrent = new Date(2021, 8, -20, -1, -63, 1, 0);
     const timeDifferencesCurrent =
       (counterEndDateCurrent.getTime() - new Date().getTime()) /
       (1000 * 3600 * 24);
@@ -27,6 +28,7 @@ const CountdownCard = () => {
     setMinutes(Math.trunc(minutesLeftCurrent));
     setSeconds(Math.trunc(secondsLeftCurrent));
   }, 1000);
+  timeDifferences <= 0 && clearInterval(countdownInterval);
 
   return (
     <div className="box">
